@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="io.yanmain.mycoder"
+      android:versionCode="1"
+      android:versionName="1.0">
+	<uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--<uses-sdk-->
+        <!--android:minSdkVersion="10" />	-->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" 
+        android:name="io.yanmain.mycoder.mApplication"
+        android:theme="@style/AppTheme">
+        <activity android:name="MyCoder"
+                  android:label="@string/app_name"
+                  android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="SettingActivity"
+            android:label="@string/app_name" />
+        <service
+            android:name="io.yanmain.mycoder.WebService">
+            <intent-filter>
+                <action android:name="io.yanmain.mycoder.WebService" />
+            </intent-filter>            
+        </service>
+        <!-- 系统开机启动 -->
+        <receiver android:name="io.yanmain.mycoder.BootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>        
+    </application>
+</manifest>

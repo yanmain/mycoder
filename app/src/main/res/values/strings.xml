@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyCoder</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="setting_group_base">基本设置</string>
+    <string name="setting_base_auto_run">开机启动</string>
+    <string name="setting_base_quit_stop_webservice">退出时停止服务</string>
+</resources>

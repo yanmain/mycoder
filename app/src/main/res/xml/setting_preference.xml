@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="@string/setting_group_base" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="ENABLE_AUTO_RUN"
+            android:title="@string/setting_base_auto_run" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="ENABLE_QUIT_STOP_WEBSERVICE"
+            android:title="@string/setting_base_quit_stop_webservice" />        
+    </PreferenceCategory>    
+</PreferenceScreen>    

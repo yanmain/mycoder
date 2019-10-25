@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId "io.yanmain.mycoder"
+        minSdkVersion 10
+//        targetSdkVersion 10
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('key/tnmesapp')
+            storePassword 'guwn123'
+            keyAlias 'tnmesapp'
+            keyPassword 'guwn123'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+
+            signingConfig signingConfigs.release
+            debuggable false
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:18.0.0'
+//    implementation 'com.android.support:appcompat-v7:25.3.1'
+}
