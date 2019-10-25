@@ -12,10 +12,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('key/tnmesapp')
-            storePassword 'guwn123'
-            keyAlias 'tnmesapp'
-            keyPassword 'guwn123'
+
         }
     }
 
